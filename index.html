@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Productivity Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📊 Student Productivity Tracker</h1>
+
+    <!-- Add Task -->
+    <div class="form">
+        <input type="text" id="taskName" placeholder="Task name">
+
+        <select id="subject">
+            <option>Java</option>
+            <option>Python</option>
+            <option>Data Structures</option>
+        </select>
+
+        <select id="priority">
+            <option value="High">High Priority</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+        <input type="date" id="dueDate">
+
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('completed')">Completed</button>
+        <button onclick="setFilter('pending')">Pending</button>
+    </div>
+
+    <!-- Progress -->
+    <h3 id="progress"></h3>
+    <div class="progress-bar">
+        <div id="progressFill"></div>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
